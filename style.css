@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 :root {
-  --cor-primaria: #111;
-  --cor-secundaria: #f6f6f6;
-  --cor-terciaria: #fd2231; /* <- ATIVIDADE ---- trocar A COR */
-  --cor-hover: #272727;
+  --cor-primaria: #453c5c;
+  --cor-secundaria: : #51647a;
+  --cor-terciaria: #31ada1; /* <- ATIVIDADE ---- trocar A COR */
+  --cor-hover: #59d999;
 }
 
 * {
@@ -14,7 +14,9 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: var(--cor-secundaria);
   background-color: var(--cor-primaria);
   display: flex;
@@ -65,7 +67,7 @@ body {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 30px;
-  color: var(--cor-secundaria);
+  color: var(--cor-hover);
 }
 
 /* ---------- CONTEÚDO PRINCIPAL ---------- */
@@ -81,16 +83,21 @@ body {
 
 .card {
   background-color: var(--cor-hover);
-  border: 2px solid #888; /* <- ATIVIDADE ---- trocar por variável */
+  border: none solid #888; /* <- ATIVIDADE ---- trocar por variável */
   border-radius: 10px;
-  width: 250px;
+  width: 300px;
   text-align: center;
-  padding: 20px;
-  transition: transform 0.3s;
+  padding: 1rem;
+  transition: transform 0.5s;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  align-items: center;    /* Centraliza-os horizontalmente (como o text-align) */
+  gap: 1rem;              /* <<< A MÁGICA: Adiciona 1rem de espaço ENTRE cada item */
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.25);
 }
 
 .card img {
@@ -101,7 +108,7 @@ body {
   object-fit: cover;
 }
 
-button {
+a {
   background-color: var(--cor-terciaria);
   border: none;
   color: white;
@@ -112,8 +119,8 @@ button {
   font-weight: bold;
 }
 
-button:hover {
-  background-color: var(--cor-hover);
+a:hover {
+  background-color: var(--cor-primaria);
   border: 2px solid var(--cor-terciaria);
 }
 
@@ -155,3 +162,4 @@ button:hover {
     font-size: 1.5rem;
   }
 }
+
